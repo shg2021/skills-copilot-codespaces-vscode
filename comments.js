@@ -1,9 +1,3 @@
-// create web server
-// Path: server.js
-const express = require('express')
-const app = express()
-const port = 3000
-app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-Path: index.js
-const server = require('./server')
+// create web serverwith node.js
+// run 'node comments.js' in terminal
+// then open 'http://localhost:3000' in browser
