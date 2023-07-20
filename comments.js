@@ -1,21 +1,11 @@
 // create web server with express
-const express = require('express');
-const app = express();
-// get the comments in the comments.json file
-const comments = require('./comments.json');
-// set port to 3000
-const port = 3000;
+var http = require('http'); // 1 - Import Node.js core module
 
-// serve static files from the public directory
-app.use(express.static(__dirname + '/public'));
+var server = http.createServer(function (req, res) {   // 2 - creating server
 
-// set up route to get comments
-app.get('/comments', (req, res) => {
-  // send back all of the comments
-  res.send(comments);
+    //handle incomming requests here..
 });
 
-// listen for requests on port 3000
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
-});
+server.listen(5000); //3 - listen for any incoming requests
+
+console.log('Node.js web server at port 5000 is running..')
